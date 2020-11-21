@@ -1,0 +1,13 @@
+FROM ubuntu:16.04
+RUN apt-get update 
+RUN sudo apt-get install openjdk-9-jdk-headless
+RUN apt-get -y install openjdk-8-jdk
+RUN rm -rf /var/lib/apt/lists/*
+
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ENV PATH $JAVA_HOME/bin:$PATH
+
+COPY Hello.java /opt/source-code
+WORKDIR /opt-/source-code
+RUN javac Hello.java
+RUN java Hello

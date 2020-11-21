@@ -1,0 +1,2 @@
+docker image build . -> roda a imagem
+docker image build --tag exemplo . -> roda a imagem e cria com esse nome

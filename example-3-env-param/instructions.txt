@@ -1,0 +1,2 @@
+docker image build --tag exemplo-file-param .
+docker run exemplo-file-param -e myEnv=aaa
