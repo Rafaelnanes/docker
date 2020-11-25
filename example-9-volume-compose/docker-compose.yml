@@ -1,0 +1,9 @@
+version: '3'
+services:
+    volume-example:
+        container_name: volume-example
+        build:
+            dockerfile: Dockerfile
+            context: ./
+        volumes:
+            - C:\dev\docker\docker\example-8-volume\myFolder:/myFolder

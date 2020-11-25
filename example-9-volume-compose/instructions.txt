@@ -1,0 +1,4 @@
+docker image build --tag volume-example .
+docker run -it -v C:\dev\docker\docker\example-8-volume\myFolder:/myFolder --name vt volume-example
+ls 
+touch file.txt
