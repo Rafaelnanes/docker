@@ -8,4 +8,4 @@ ENV JAVA_HOME /usr/lib/jvm/java-15-openjdk-amd64
 ENV PATH $JAVA_HOME/bin:$PATH
 
 COPY product-api.jar .
-CMD java -jar product-api.jar 
+CMD java -jar product-api.jar --server.port=80

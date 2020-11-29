@@ -1,0 +1,28 @@
+version: '3.2'
+services:
+    client-api:
+        container_name: client-api
+        build:
+            dockerfile: Dockerfile
+            context: ./client-api
+        ports:
+          - '5000:80'
+        depends_on: 
+            - product-api
+        networks:
+            - simplenet
+    product-api:
+        build:
+            dockerfile: Dockerfile
+            context: ./product-api
+        networks:
+            simplenet:
+                aliases:
+                    - myProductApi
+                    
+        deploy:
+            mode: replicated
+            replicas: 3
+            endpoint_mode: dnsrr
+networks:
+    simplenet:
