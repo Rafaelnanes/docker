@@ -6,4 +6,4 @@ services:
             dockerfile: Dockerfile
             context: ./
         volumes:
-            - C:\dev\docker\docker\example-9-bind-mount-compose\myFolder:/myFolder
+            - ./myFolder:/myFolder

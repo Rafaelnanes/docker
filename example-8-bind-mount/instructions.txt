@@ -1,5 +1,5 @@
 docker image build --tag bind-mount-example .
-docker run -it -v C:\dev\docker\docker\example-8-bind-mount\myFolder:/myFolder --name vt bind-mount-example
+docker run -it -v ./myFolder:/myFolder --name vt bind-mount-example
 ls 
 touch file.txt
 
